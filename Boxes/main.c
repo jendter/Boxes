@@ -23,6 +23,8 @@ float compareBoxVolume(Box box1, Box box2);
 
 int main(int argc, const char * argv[]) {
     
+    /*
+     //Testing code
     Box biggerBox = setBox(3.0, 7.0, 5.0);
     Box smallerBox = setBox(1.0, 3.0, 2.2);
     
@@ -31,9 +33,10 @@ int main(int argc, const char * argv[]) {
     
     printf("The volume of \n Box 1 is %f\n Box 2 is %f \n\n", biggerBoxVolume, smallerBoxVolume);
     
-    float comparisonVolume = compareBoxVolume(biggerBox,smallerBox);
+    float comparisonVolume = compareBoxVolume(smallerBox,biggerBox);
     
     printf("Box 1 is %f times larger than Box 2", comparisonVolume);
+    */
     
     return 0;
 }
@@ -68,7 +71,7 @@ Box setBox(float length, float width, float height) {
     
 }
 
-float compareBoxVolume(Box box1, Box box2) {
-    return ( getBoxVolume(box1) / getBoxVolume(box2) );
+float compareBoxVolume(Box smallerBox, Box biggerBox) {
+    return ( getBoxVolume(biggerBox) / getBoxVolume(smallerBox) );
 }
 
